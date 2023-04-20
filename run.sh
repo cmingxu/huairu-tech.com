@@ -1,1 +1,1 @@
-docker run  --publish 80:80 --name huairutech -v /data/websites/huairu-tech.com/site:/usr/share/nginx/html:ro -v /data/websites/huairu-tech/certs:/etc/huairu-tech -d nginx 
+docker run  --publish 80:80 --name huairutech -v $(pwd)/site:/usr/share/nginx/html:ro -v $(pwd)/certs:/etc/huairu-tech $(pwd)/nginx.conf:/etc/nginx/nginx.conf -d nginx 
